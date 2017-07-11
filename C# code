@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _19.money1
+{
+    class money
+    {
+        static void Main(string[] args)
+        {
+            double numBitcoin = double.Parse(Console.ReadLine());
+            double numYoan = double.Parse(Console.ReadLine());
+            double tax = double.Parse(Console.ReadLine());
+            var bitcoinTiEuro = (numBitcoin * 1168);
+            var yoanToEuro = (numYoan * 0.15)*1.76;
+            var all = (bitcoinTiEuro + yoanToEuro) / 1.95;
+            
+            var alltax = (all / 100) * tax;
+
+             Console.WriteLine("{0:f2}", all-alltax);
+        }
+    }
+}
